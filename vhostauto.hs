@@ -14,7 +14,7 @@ echo "<VirtualHost *:80>
         Order allow,deny
         allow from all
     </Directory>
-</VirtualHost>
+</VirtualHost>" > /etc/apache2/sites-available/$1.conf
  
 echo "Ativando o site "$1" em /etc/apache2/sites-available"
  
