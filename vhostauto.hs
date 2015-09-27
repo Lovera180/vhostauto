@@ -34,7 +34,7 @@ echo "Baixando o projeto do laravel /var/www/"$1
  
 cd /var/www
  
-composer create-project laravel/larave --prefer-dist $1
+composer create-project laravel/laravel --prefer-dist $1
  
 echo "Concedendo permissões"
  
