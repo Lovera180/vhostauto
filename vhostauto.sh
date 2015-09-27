@@ -1,4 +1,10 @@
 #!/bin/sh
+# Verifica se o usuário tem permissão root
+if ["$(whoami)" != "root"]; then
+  echo "Você não tem permissão para executar $0
+  Use: sudo sh $0 site-name"
+  exit 1;
+fi
 echo "Criando virtual host para o site "$1
  
 echo "<VirtualHost *:80>
@@ -39,7 +45,7 @@ composer create-project laravel/laravel --prefer-dist $1
 echo "Concedendo permissões"
  
 # altere o user para o nome do seu usuário
-chown -R www-data:user $1
+chown -R www-data:$(logname) $1
 chmod -R 777 $1
  
 cd $1
