@@ -46,7 +46,7 @@ echo "Concedendo permissões"
  
 # altere o user para o nome do seu usuário
 chown -R www-data:$(logname) $1
-chmod -R 777 $1
+chmod -R 755 $1
  
 cd $1
  
