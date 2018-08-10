@@ -36,11 +36,11 @@ echo "Adicionando o direcionamento do domínio em /etc/hosts..."
  
 echo "127.0.0.1 "$1 >> /etc/hosts
  
-echo "Baixando o projeto do laravel /var/www/"$1
+#echo "Baixando o projeto do laravel /var/www/"$1
  
-cd /var/www
+#cd /var/www
  
-composer create-project laravel/laravel --prefer-dist $1
+#composer create-project laravel/laravel --prefer-dist $1
  
 echo "Concedendo permissões"
  
